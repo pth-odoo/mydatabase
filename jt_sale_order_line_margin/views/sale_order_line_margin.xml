@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Contact form View-->
+    <record model="ir.ui.view" id="sale_order_line_margin_form_view_inherited">
+        <field name="name">sale.order.line.margin.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page/field[@name='order_line']/tree/field[@name='discount']" position="after">
+                <field name="margin"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
